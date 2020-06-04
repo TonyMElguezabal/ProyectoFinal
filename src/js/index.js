@@ -1,2 +1,2 @@
 //comentario para el JS
-alert("Hola mundo");
+alert("Hola mundo del JS");

@@ -3560,7 +3560,7 @@ eval("/**\n * Copyright (c) 2014-present, Facebook, Inc.\n *\n * This source cod
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("//comentario para el JS\nalert(\"Hola mundo\");\n\n//# sourceURL=webpack:///./src/js/index.js?");
+eval("//comentario para el JS\nalert(\"Hola mundo\");\nconsole.log(\"hola mundo JS\");\n\n//# sourceURL=webpack:///./src/js/index.js?");
 
 /***/ }),
 
