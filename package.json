@@ -16,6 +16,11 @@
   "bugs": {
     "url": "https://github.com/TonyMElguezabal/ProyectoFinal/issues"
   },
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open"
+  },
   "homepage": "https://github.com/TonyMElguezabal/ProyectoFinal#readme",
   "devDependencies": {
     "@babel/core": "^7.10.2",
