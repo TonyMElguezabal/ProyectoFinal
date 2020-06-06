@@ -1,21 +1,34 @@
 import css from "./estilos.css";
-const usuarios = [
+const array_usuarios = [
   {
-    user: "Antonio",
-    password: "1234",
+    auser: "Antonio",
+    apassword: "1234",
+  },
+  {
+    auser: "fulanito",
+    apassword: "4321",
+  },
+  {
+    auser: "Gustavo",
+    apassword: "jaimes",
   },
 ];
 
 const loginForm = document.getElementById("login-form");
 const loginButton = document.getElementById("login-form-submit");
-const loginErrorMsg = document.getElementById("login-error-msg");
+
+function validar_usuario(usuario, password) {
+  return array_usuarios.find((u) => {
+    return u.auser === usuario && u.apassword === password;
+  });
+}
 
 loginButton.addEventListener("click", (e) => {
   e.preventDefault();
   const usuario = loginForm.username.value;
   const pass = loginForm.password.value;
 
-  if (usuario === "user" && pass === "web_dev") {
+  if (validar_usuario(usuario, pass)) {
     alert("Entraste al sistema");
     console.log("Ya entro al sistema");
   } else {
