@@ -1,8 +1,10 @@
 import css from "./estilos.css";
+const API_URL = "https://dog.ceo/api/breeds/image/random";
+
 const array_usuarios = [
   {
-    auser: "Antonio",
-    apassword: "1234",
+    auser: "a",
+    apassword: "a",
   },
   {
     auser: "fulanito",
@@ -29,9 +31,19 @@ loginButton.addEventListener("click", (e) => {
   const pass = loginForm.password.value;
 
   if (validar_usuario(usuario, pass)) {
-    alert("Entraste al sistema");
-    console.log("Ya entro al sistema");
+    //alert("Entraste al sistema");
+    getPerroData();
   } else {
     alert("Error de login");
   }
 });
+
+function getPerroData() {
+  fetch(API_URL).then(function (response) {
+    response.json().then(function (data) {
+      URL = data.message;
+      document.getElementById("divperro").innerHTML =
+        '<img width="100" height="100" src="' + URL + '">';
+    });
+  });
+}
